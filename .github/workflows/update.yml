@@ -23,7 +23,7 @@ jobs:
       - name: Run ETF script
         run: python etf_script.py
 
-      - name: Commit and push results:
+      - name: Commit and push results
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
