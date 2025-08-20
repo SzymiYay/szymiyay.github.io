@@ -1,24 +1,26 @@
-name: Update ETF data
+name: Update ETF Data
 
 on:
-  schedule: "0 6 * * *"
-  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *' # codziennie o 6:00 UTC (8:00 w Polsce)
+  workflow_dispatch: # możliwość ręcznego uruchomienia
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        users: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        users: actions/setup-python@v4
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install yfinance pandas python-dateutil
+        run: |
+          pip install yfinance pandas python-dateutil
 
       - name: Run ETF script
         run: python etf_script.py
@@ -27,6 +29,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add results.json history.json
-          git commit -m "Automatic data update"
-          git push 
+          git add results.json momentum_history.json
+          git commit -m "Automatyczna aktualizacja danych" || echo "Brak zmian"
+          git push
