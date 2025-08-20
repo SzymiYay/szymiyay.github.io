@@ -1,0 +1,32 @@
+name: Update ETF data
+
+on:
+  schedule: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        users: actions/checkout@v3
+
+      - name: Set up Python
+        users: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install yfinance pandas python-dateutil
+
+      - name: Run ETF script
+        run: python etf_script.py
+
+      - name: Commit and push results:
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add results.json history.json
+          git commit -m "Automatic data update"
+          git push 
