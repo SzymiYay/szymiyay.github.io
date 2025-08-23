@@ -1,7 +1,7 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_disptach:
+  workflow_disptatch:
   push:
     branches: [main]
 
