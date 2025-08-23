@@ -10,7 +10,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <a href="src/index.html">ETF</a>
+            <a href="/etf">ETF</a>
           </li>
         </ul>
       </nav>
