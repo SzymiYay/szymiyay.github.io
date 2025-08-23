@@ -5,7 +5,7 @@ describe('App component', () => {
   test('renders site owner name', () => {
     render(<App />)
     expect(
-      screen.getByRole('heading', { name: /Szymon Frączek test/i })
+      screen.getByRole('heading', { name: /Szymon Frączek/i })
     ).toBeInTheDocument()
   })
 
@@ -14,5 +14,10 @@ describe('App component', () => {
     const link = screen.getByRole('link', { name: /GEM/i })
     expect(link).toBeInTheDocument()
     expect(link).toHaveAttribute('href', '/gem')
+  })
+
+  test('matches snapshot', () => {
+    const { asFragment } = render(<App />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })
