@@ -86,7 +86,12 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload build output
+      - name: Upload build output for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Upload build output for E2E tests
         uses: actions/upload-artifact@v4
         with:
           name: dist
