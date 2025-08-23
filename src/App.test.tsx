@@ -13,7 +13,7 @@ describe('App component', () => {
     render(<App />)
     const link = screen.getByRole('link', { name: /GEM/i })
     expect(link).toBeInTheDocument()
-    expect(link).toHaveAttribute('href', '/gem')
+    expect(link).toHaveAttribute('href', '/finance')
   })
 
   test('matches snapshot', () => {

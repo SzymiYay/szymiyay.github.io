@@ -13,7 +13,7 @@ exports[`App component > matches snapshot 1`] = `
     <ul>
       <li>
         <a
-          href="/gem"
+          href="/finance"
         >
           GEM
         </a>
