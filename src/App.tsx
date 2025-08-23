@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <header>
-        <h1 className="site-owner-name">Szymon Frączek</h1>
+        <h1 className="site-owner-name">Szymon Frączek test</h1>
       </header>
 
       <nav>
