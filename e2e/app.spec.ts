@@ -9,5 +9,5 @@ test('homepage has site owner name and GEM link', async ({ page }) => {
 
   const gemLink = page.getByRole('link', { name: /GEM/i })
   await expect(gemLink).toBeVisible()
-  await expect(gemLink).toHaveAttribute('href', '/gem')
+  await expect(gemLink).toHaveAttribute('href', '/finance')
 })
