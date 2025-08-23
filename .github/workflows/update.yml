@@ -26,7 +26,7 @@ jobs:
           pip install yfinance pandas python-dateutil
 
       - name: Run ETF script
-        run: python etf_script.py
+        run: python scripts/gem.py
 
       - name: Commit and push results
         run: |
