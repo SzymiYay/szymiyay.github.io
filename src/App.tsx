@@ -10,7 +10,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <a href="/etf">ETF</a>
+            <a href="/gem">GEM</a>
           </li>
         </ul>
       </nav>
