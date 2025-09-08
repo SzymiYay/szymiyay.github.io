@@ -1,0 +1,33 @@
+.skills {
+  padding: 1rem 2rem 3rem;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.item {
+  padding: 1rem 1.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.item:hover {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}

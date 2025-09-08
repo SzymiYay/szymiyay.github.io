@@ -1,0 +1,56 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient(to bottom, #1f2937, #111827);
+  color: white;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 80rem;
+}
+
+.name {
+  font-size: 5.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  color: #d1d5db;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 4rem;
+}
+
+.btn {
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+.btnSecondary {
+  background: #374151;
+}
+
+.btnSecondary:hover {
+  background: #1f2937;
+}
