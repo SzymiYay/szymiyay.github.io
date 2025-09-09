@@ -16,7 +16,7 @@ export default function Navbar() {
           }
         })
       },
-      { threshold: 0.6 }
+      { threshold: 0.3 }
     )
     sections.forEach((section) => observer.observe(section))
 
