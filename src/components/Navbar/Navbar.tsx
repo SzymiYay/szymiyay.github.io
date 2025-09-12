@@ -10,13 +10,15 @@ export default function Navbar() {
     const sections = document.querySelectorAll('section')
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+        if (visible) {
+          setActiveSection(visible.target.id)
+        }
       },
-      { threshold: 0.3 }
+      { threshold: [0, 0.25, 0.5, 0.75, 1] }
     )
     sections.forEach((section) => observer.observe(section))
 
